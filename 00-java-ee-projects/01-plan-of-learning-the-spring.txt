@@ -1,0 +1,16 @@
+My sequencial plan of learning the spring-frmaework:
+01-databases
+02-ORM, Hibernate, JDBC
+03-MyBatis
+04-Spring Core (IoC, DI, Bean lifecycle)
+05-Spring MVC
+06-Spring boot 
+07-Thymeleaf
+08-Spring Security
+09-Spring data JPA (DAO)
+10-AOP (aspect oriented programming)
+11-Spring Cloud
+12-OAuth, jwt
+13-RabbitMQ
+14-ActiveMQ
+15-Kafka
