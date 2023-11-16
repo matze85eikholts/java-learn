@@ -1,6 +1,6 @@
 My sequencial plan of learning the spring-frmaework:
 01-databases
-02-ORM, Hibernate, JDBC
+02-ORM, Hibernate, JDBC (EntityManager, JPQL, JTA-Java Transaction API, ACID)
 03-MyBatis
 04-Spring Core (IoC, DI, Bean lifecycle)
 05-Spring MVC
@@ -14,3 +14,26 @@ My sequencial plan of learning the spring-frmaework:
 13-RabbitMQ
 14-ActiveMQ
 15-Kafka
+16-Spring Batch
+-----------------------------------
+15-Kafka: (распределенная платформа потоковой обработки.)
+
+15.1 Обмен сообщениями по типу «публикация/подписка» (publish/
+subscribe (pub/sub) messaging) — паттерн проектирования.
+15.2 Производители, потребители, брокеры
+15.3 Брокер Apache Kafka - Apache ZooKeeper (OpenJDK, Oracle JDK)
+
+Apache Kafka использует Apache ZooKeeper для хранения метаданных о кластере 
+Kafka, а также подробностей о клиентах-потребителях. 
+ZooKeeper — это централизованный сервис для хранения информации о конфигурации, 
+присвоения имен, обеспечения распределенной синхронизации и предоставления 
+группового обслуживания.
+
+15.3 Утилита MirrorMaker
+
+(Kafka Connect помогает извлечь данные из исходной системы данных 
+и направить их в Kafka или извлечь данные из Kafka и направить их в исходную 
+систему данных. Kafka Streams предоставляет библиотеку для простой разработки 
+масштабируемых иотказоустойчивых приложений потоковой обработки. )
+
+16-Spring Batch:
