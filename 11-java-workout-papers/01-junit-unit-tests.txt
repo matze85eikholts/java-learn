@@ -1,0 +1,42 @@
+public class Calculator {
+   public int sum(int a, int b) {
+	return a + b; 
+   }
+   
+   public boolean evenOrOdd(int number) {
+	return number % 2 == 0;
+   }
+}
+--------------------------------------
+import org.junit.jupiter.api.Test;
+
+class CalculatorTest {
+   @Test
+   void sum() {
+   	Calculator calculator = new Calculator();
+   	int sum = calculator.sum(10, 15);
+   	Assertions.assertEquals(25, sum);
+   }
+   @Test
+   void evenOrOdd_evenNumber() {
+	Calculator calculator = new Calculator();
+	boolean even = calculator.evenOrOdd(10);
+	Assertions.assertTrue(even);
+   }
+   @Test
+   void evenOrOdd_oddNUmber() {
+	Calculator calculator = new Calculator();
+	boolean odd = calculatror.evenOrOdd(15);
+	Asssertions.assertFalse(odd);
+
+   }
+
+
+
+
+   
+}
+---------------------------------------------
+import org.junit.jupiter.api.Test;
+
+--------------------------------
