@@ -24,19 +24,62 @@ class CalculatorTest {
 	Assertions.assertTrue(even);
    }
    @Test
-   void evenOrOdd_oddNUmber() {
+   void evenOrOdd_oddNumber() {
 	Calculator calculator = new Calculator();
 	boolean odd = calculatror.evenOrOdd(15);
 	Asssertions.assertFalse(odd);
 
    }
+}
+//-attemt-2-------------------------------------
+import org.junit.jupiter.api.Test;
 
-
-
-
-   
+class CalculatorTest {
+   @Test
+   void sum() {
+	Calculator calculator = new Calculator();
+	int sum = calculator.sum(10, 5);
+	Assertions.assertEquals(15, sum);
+   }
+   @Test 
+   void evenOrOdd_evenNumber() {
+	Calculator calculator = new Calculator();
+	boolean even = calculator.evenOrOdd(10);
+	Assertions.assertTrue(even);
+   }
+   @Test
+   void evenOrOdd_oddNumber() {
+	Calculator calculator = new Calculator();
+	boolean odd = calculator.evenOrOdd(15);
+	Assertions.assertFalse(odd);
+   }
+}
+//---attempt-3---------------------------------------------------------------
+public class Calculator {
+   public int sum (int a, int b) {
+	return a + b;
+   }
+   public boolean evenOrOdd(int a) {
+	return a % 2 == 0;
+   }
+   public int divide (int a, int b) {
+	return a / b;
+   }  
 }
 ---------------------------------------------
 import org.junit.jupiter.api.Test;
+public class TestCalculator {
+   private Calculator calculator;
+   
+   @BeforeEach
+   void setup() {
+	calculator = new Calcultor();
+   }
+   
+   @Test
+   void divide_byZero() {
+	Assertions.assertThrows (ArithmeticException.Class, () -> calculator.divide(10, 0));
+   }
+}
 
 --------------------------------
