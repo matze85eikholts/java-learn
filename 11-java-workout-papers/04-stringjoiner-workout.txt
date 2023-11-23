@@ -1,0 +1,45 @@
+/*------3-times---------*/
+
+import java.util.StringJoiner;
+
+public class Example {
+   public static void main(String[] args) {
+   	StringJoiner joiner = new StringJoiner(",");
+	
+	joiner.add("Apple");
+	joiner.add("Orange");
+	joiner.add("Peanut");
+	
+	String result = joiner.toString();
+	System.out.println(result);
+   }
+
+}
+-------------------
+import java.util.StringJoiner;
+
+public class Example {
+   public static void main (String[] args) {
+	StringJoiner joiner = new StringJoiner (",");
+	joiner.add("a");
+	joiner.add("b");
+	joiner.add("c");
+
+	String result = joiner.toString();
+	System.out.println(result);
+   }
+}
+----------------------------------------
+import java.util.StringJoiner;
+
+public class Example {
+   public static void main(String[] args) {
+	StringJoiner joiner = new StringJoiner(",");
+	joiner.add("first");
+	joiner.add("second");
+	joiner.add("third");
+	String result = joiner.toString();
+	System.out.println(result);
+   }
+
+}

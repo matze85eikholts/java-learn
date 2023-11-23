@@ -1,0 +1,31 @@
+//--advanced-learning-workout--too--many-things-to know----
+
+import java.util.concurrent.CountDownLatch;
+
+public class Example {
+    public static void main(String[] args) throws InterruptedException{
+	CountDownLatch latch = new CountDownLatch(3);
+
+	Thread worker1 = new Worker(latch, "Worker 1");
+	Thread worker2 = new Worker(latch, "Worker 2");
+	Thread worker3 = new Worker(latch, "Worker 3");
+    }
+
+}
+
+class Worker extends Thread {
+   private CountDownLatch latch;
+
+   public Worker(CountDownLatch latch, String name) {
+	super(name);
+        this.latch = latch;
+   }
+
+   @Override
+   public void run() {
+	System.out.println(getName() + " is working...");
+	
+	latch.countDown();
+   }
+
+}
