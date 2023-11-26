@@ -1,0 +1,21 @@
+Collections.sort(inventory, new Comporator<Apple>() {
+   public int compare(Apple a1, Apple a2) {
+	return a1.getWeight().compareTo(a2.getWeight());
+   };
+});
+
+Java 8 the same:
+
+inventory.sort(comparing(Apple::getWeight));
+
+/*---method references----------------*/
+
+File[] hiddenFiles = new File(".").listFiles( new Filter() {
+   public boolean accept(File file) {
+	return file.isHidden();
+   }
+});
+
+Java8:
+
+File[] hiddenFiles = new File(".").listFiles(File::isHidden);
