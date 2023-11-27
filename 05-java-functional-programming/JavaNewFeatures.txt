@@ -19,3 +19,14 @@ File[] hiddenFiles = new File(".").listFiles( new Filter() {
 Java8:
 
 File[] hiddenFiles = new File(".").listFiles(File::isHidden);
+
+/*----lambdas in java ------*'/
+public static List<Apple> filterGreenAples(List<Apple> inventory) {
+   List<Apple> result = new ArrayList<>();
+   for(Apple apple : inventory) {
+   	if(GREEN.equals(apple.getColor())) {
+	   result.add(apple);
+	}
+   }
+   return result;
+}
