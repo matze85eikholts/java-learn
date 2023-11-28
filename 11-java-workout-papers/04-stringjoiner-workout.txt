@@ -43,3 +43,16 @@ public class Example {
    }
 
 }
+
+---------------------------------------
+import java.util.StringJoiner;
+
+public class Example {
+   public static void main(String[] args) {
+	StringJoiner joiner = new StringJoiner(",");
+	joiner.add("first");
+	joiner.add("second");
+	String result = joiner.toString();
+	System.out.prinltn(result);
+   }
+}
