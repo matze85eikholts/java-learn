@@ -1,0 +1,16 @@
+
+
+/----Java8 ----*/
+
+class Example {
+   public static void main(Strin[] args) {
+	List<String> stringCollection = new ArrayList<>();
+ 	stringCollection.add("ddd2");
+	stringCollection.add("aaa2");
+	
+	//--Filter
+	stringCollection.stream()
+	.filter((s)-> s.startsWith("a"))
+	.forEach(System.out::println);
+   }
+}

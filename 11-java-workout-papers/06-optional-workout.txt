@@ -1,0 +1,18 @@
+Optional<String> optional = Optional.of("bam");
+optional.isPresent(); //true
+optional.get(); //"bam"
+optional.orElse("fallback");
+optional.ifPresent( (s) -> System.out.println(s.chatAt(0)));//"b"
+
+
+///---------
+public class Example {
+   public static void main(String[] args) {
+	Optional<String> optional = Optional.of("bam");
+	optional.isPresent(); //true
+	optional.get(); //true
+	optional.orElse("fallBack"); // bam
+	optional.ifPresent( (s) -> System.out.println(s.charAt(0))
+	); // b
+   }
+}
