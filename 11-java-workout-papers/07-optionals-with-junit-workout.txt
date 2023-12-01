@@ -1,0 +1,8 @@
+In tests:
+import java.util.Optional;
+
+@Test 
+public void whenCreatesEmptyOptional_thenCorrect() {
+   Optional<String> empty = Optional.empty();
+   assertFalse(empty.isPresent());
+}

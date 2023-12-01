@@ -16,3 +16,83 @@ public class Example {
 	); // b
    }
 }
+
+import java.util.Optional;
+
+public class Example2 {
+   Optional<String> optional = Optional.of("bam");
+   optional.isPresent(); //true
+   optional.get(); 
+   optional.orElse("fallback"); //bam
+   optional.ifPresent( (s)-> System.out.println(s.charAt(0)));
+}
+----------------------------------------
+import java.util.Optional;
+
+public class Example2 {
+   Optional<String> optional = Optional.of("bam");
+   optional.isPresent(); //true
+   optional.get(); // bam
+   optional.orElse("fallback"); //bam
+   optional.ifPresent( (s)-> System.out.println(s.charAt(0)));
+
+}
+
+
+import java.util.Optional;
+
+public class Example3 {
+   public static void main(String[] args) {
+	Optional<String> name = Optional.of("John");
+	System.out.println(name); //output Optional[John]
+	
+	//--getting NullPointerException 
+	Optional<String> name2 = Optional.of(null); // java.lang.NullPointerException
+
+	Optional<String> name3 = Optional.ofNullable("John");
+	System.out.println(name3); //output Optional[John]
+	String empty = null;
+	Optional<String> name3 = Optional.ofNullable(empty);
+	System.out.println(name3); //output Optional.empty
+
+	Optional<String> emptyOptional = Optional.empty();
+	System.out.println(emptyOptional); //output Optional.empty
+        
+        //method get()
+	Optional<String> name4 = Optional.of("John");
+	System.out.println(name4.get()); //output John
+	
+	Optional<Object> nullOptional = Optional.ofNullable(null);
+	System.out.println(nullOptional.get());//java.util.NoSuchElementException: No value present
+        
+ }
+}
+
+public class Example4 {
+   public static void main(String[] args) {
+	Optional<String> name = Optional.of("John");
+	if(name.isPresent()) {
+	   System.out.println(name.get()); //John
+	}
+
+	Optional<Object> empty = Optional.empty();
+	if (empty.isPresent()) { // nothing will be printled
+	   System.out.println(empty.get());
+	}
+   }
+}
+
+public class Example5 {
+   public static void main(String[] args) {
+	Optional<String> name = Optional.of("John");
+	name.ifPresent(val -> System.out.println(val)); //John
+
+	Optional<String> empty = Optional.empty();
+	empty.ifPresent(val -> System.out.println(val)); //nothing!!!
+
+   }
+}
+
+
+
+
