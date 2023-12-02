@@ -14,3 +14,28 @@ class Example {
 	.forEach(System.out::println);
    }
 }
+
+
+public class Main
+{
+   public static void main(String[] args) {
+      
+      System.out.println("Hello World");
+
+      applyFunctionAndPrint(200, new Function() {
+            @Override
+            public Integer apply(Integer n) {
+                return n * 3;
+            }
+      });
+    }
+	
+    interface Function {
+        Integer apply(Integer t);
+    }
+
+    public static void applyFunctionAndPrint(int n, Function f) {
+        System.out.println(f.apply(n));
+    }
+
+}
