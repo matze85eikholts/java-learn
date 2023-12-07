@@ -122,8 +122,8 @@ public class Calculator {
    public int sum(int a, int b) {
 	return a + b;
    }
-   public boolean evenOrOdd() {
-	return a % b == 0;
+   public boolean evenOrOdd(int a) {
+	return a % 2 == 0;
    }
    public int divide (int a, int b) {
 	return a / b;
@@ -177,5 +177,53 @@ public class TestCalculator {
 	Calculator calculator = new Calculator();
 	Assertion.assertThrows(ArithmeticException.Class, ()-> calculator.divide(10,0));
    }
+
+}
+
+-------------------------------------
+public class Calculator {
+   public int sum(int a, int b) {
+	return a + b;
+   }
+   public boolean evenOrOdd(int a) {
+	return a % 2 == 0;
+   }
+   public int divide (int a, int b) {
+	return a /  b;
+   }
+}
+
+import org.junit.jupiter.api.Test;
+
+public class TestCalculator {
+   @Test
+   void Sum() {
+	Calculator calculator = new Calculator();
+	Assertion.assertEquals(4, calculator.sum(2,2));
+   }
+   @Test
+   void Sum2() {
+	Calculator calculator = new Calculator();
+	int sum = calculator.sum(2,2);
+	Assertion.assertEquals(4, sum);
+   }
+   @Test
+   void evenOrOdd_even() {
+	Calculator calculator = new Calculator();
+	boolean even = calculator.evenOrOdd(10);
+	Assertion.assertTrue(even);
+   }
+   @Test
+   void evenorOdd_odd() {
+	Calculator calculator = new Calculator();
+	boolean odd = calculator.evenOrOdd(11);
+	Assertion.assertFalse(odd);
+   }
+   @Test
+   void divide_byZero() {
+	Calculator calculator = new Calculator();
+	Assertion.assertThrows(ArithmeticException.Class, () -> calculator.divide(10, 0));
+   }
+	
 
 }
