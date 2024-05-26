@@ -15,7 +15,18 @@ piblic class TestOptional {
     @Test
     public void whenCreatesEmptyOptional_thenCorrect() {
 	Optional<String> empty = Optional.empty();
-	Assertion.assertFalse(empty.isPresent())
+	Assertion.assertFalse(empty.isPresent());
     }
 
+}
+
+import org.junit.jupiter.api.Test;
+import java.util.Optional;
+
+public class TestOptional {
+   @Test
+   public void whenCreatesEmptyOptional_thenCorrect() {
+	Optional<String> empty = Optional.empty();
+	Assertion.assertFalse(empty.isPresent());
+   }
 }
