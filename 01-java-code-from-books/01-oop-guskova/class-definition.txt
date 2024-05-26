@@ -1,0 +1,17 @@
+public class Circle {
+	double radius;
+	String color;
+	double getRadius() {
+		return this.radius;
+	}
+	double getArea() {
+		return 3.14*radius*radius;
+	}
+}
+
+public static void main(String[] args) {
+	Circle c1, c2, c3;
+	c1 = new Circle();
+	c2 = new Circle();
+	c3 = new Circle();
+}
