@@ -1,0 +1,41 @@
+public class Time {
+	private int second, minute, hour;
+	public Time(int second, int minute, int hour) {
+		this.second = second;
+		this.minute = minute;
+		this.hour = hour;
+	}
+	public Time() {
+		this.second = 0;
+		this.minute = 0;
+		this.hour = 0;
+	}
+// public getters and setters for private variables
+	public int getSecond() {
+		return this.second; 
+	}
+	public int getMinute() {
+		return this.minute;
+	}
+	public int getHour() {
+		return this.hour;
+	}
+	//-----
+
+	public Time nextSecond() {
+		++second;
+		if(second >=60) {
+			second = 0;
+			++minute;
+			if(minute >= 60){
+				minute = 0; 
+				++hour;
+				if(hour >= 24) {
+					hour = 0;
+				}
+			}
+		}
+
+		return this;
+	}
+}
