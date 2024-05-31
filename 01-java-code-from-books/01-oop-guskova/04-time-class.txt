@@ -20,6 +20,18 @@ public class Time {
 	public int getHour() {
 		return this.hour;
 	}
+	public void setSecond(int second) {
+		this.second = second;
+	}
+	public void setMinute(int minute) {
+		this.minute = minute;
+	}
+	public void setHour(int hour) {
+		this.hour = hour;
+	}
+	public String toString() {
+		return String.format("%d:%d:%d", second,minute, hour);
+	}
 	//-----
 
 	public Time nextSecond() {
