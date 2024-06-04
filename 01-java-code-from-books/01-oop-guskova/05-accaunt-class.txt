@@ -1,0 +1,35 @@
+public class Account {
+	private int accountNumber;
+	private double balance;
+	public Account(int accountNumber, double balance) {
+		this.accountNumber = accountNUmber;
+		this.balance = balance;
+	}
+	public Account(int accountNumber) {
+		this.accountNumber = accountNUmber;
+		this.balance = 0.0;		
+	}
+	public int getAccountNumber() {
+		return this.accountNumber;
+	}
+	public double getBalance() {
+		return this.balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public void credit(double amount) {
+		balance += amount;
+	}
+	public void debit(double amount) {
+		if(balance < amount) {
+			System.out.println("сумма превышает баланс");
+		} else {
+			balance -=amount;
+		}
+	}
+	public String toString() {
+		return String.format("Номер счета: %d, Баланс: %.2f",accountNumber, balance);
+	}
+
+}
