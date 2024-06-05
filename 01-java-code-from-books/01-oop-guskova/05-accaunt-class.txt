@@ -33,3 +33,10 @@ public class Account {
 	}
 
 }
+
+public class TestAccount {
+	public static void main (String[] args) {
+		Account account1 = new Account(5555, 4.0);
+		account1.getBalance().toString();
+	}
+}
