@@ -1,0 +1,46 @@
+//-here I was learning the composition's princliple
+public class Author {
+	private String name;
+	private String email;
+
+	public Author(String name, String email) {
+		this.name = name;
+		this.email = email;
+	}
+	
+	public String getName() {
+		return this.name; 
+	}
+	public String getEmail() {
+		return this.email;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setNEmail(String email) {
+		this.email = email;
+	}
+	public String toString() {
+		return name + ", " + email; 
+	}
+
+}
+
+public class Book{
+
+	private Author author; 
+	private String name;
+	private double price;
+	privat int quantity;
+	
+	public Book(Author author, String name, double price, int quantity) {
+		this.author = author;
+		this.name = name;
+		this.price = price; 
+		this.quantity = quantity; 
+
+
+	}
+	
+
+}
