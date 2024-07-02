@@ -41,6 +41,30 @@ public class Book{
 
 
 	}
-	
+	public String getName() {
+		return this.name;
+	}
+	public Author getAuthor() {
+		return this.author;
+	}
+	public double getPrice() {
+		return this.price;
+	}
+	public int getQuantity() {
+		return this.quantity;
+	}
+	public String toString() {
+		return author + " " + name;
+	}
+
+}
+
+public class BookTest {
+	public static void main (String[] args) {
+		Author dostoevsky = new Author ("Dostoevskiy", "test@mail.ru");
+		Book dummyBook = new Book (dostoevsky, "Idiot", 40.0, 50);
+		//--check the toString method
+		System.out.println(dummyBook);
+	}
 
 }
