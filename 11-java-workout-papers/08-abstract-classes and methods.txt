@@ -1,0 +1,29 @@
+public class Main {
+	public static void main(String[] args) {
+		Cat cat  = new Cat("catty", 10);
+		cat.makeSound();
+	}
+
+}
+
+public abstract class Animal {
+	private String name;
+	private int age;
+	public Animal(String name, int age) {
+		this.name = name; 
+		this.age = age; 
+	}
+	public abstract void makeSound();
+
+}
+
+public class Cat extends Animal {
+	public Cat(String mame, int age) {
+		super(name, age);
+	}
+	@Override
+	public void makeSound() {
+		System.out.println("meow meow!!!"); 
+	}
+
+}
